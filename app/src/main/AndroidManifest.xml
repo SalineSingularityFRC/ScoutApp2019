@@ -22,7 +22,10 @@
         <activity
             android:name=".Teams"
             android:screenOrientation="portrait" />
-        <activity android:name=".NewTeam" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".NewTeam"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MatchInformation"></activity>
     </application>
 
 </manifest>
