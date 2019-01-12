@@ -34,6 +34,8 @@ public class Teams extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String teamNumber = ((TextView) view.findViewById(R.id.teamNumberTextView)).getText().toString();
                 //Match information code goes here
+                Intent matchInformation = new Intent(getApplicationContext(), MatchInformation.class);
+                startActivity(matchInformation);
 
             }
         });
