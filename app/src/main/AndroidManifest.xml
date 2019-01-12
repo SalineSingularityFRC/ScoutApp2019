@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Teams"></activity>
+        <activity android:name=".Teams" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
