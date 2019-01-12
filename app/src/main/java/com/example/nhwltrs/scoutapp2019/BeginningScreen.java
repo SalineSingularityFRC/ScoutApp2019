@@ -1,5 +1,6 @@
 package com.example.nhwltrs.scoutapp2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,8 @@ public class BeginningScreen extends AppCompatActivity {
         newMatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent teams = new Intent(getApplicationContext(), Teams.class);
+                startActivity(teams);
             }
         });
 
