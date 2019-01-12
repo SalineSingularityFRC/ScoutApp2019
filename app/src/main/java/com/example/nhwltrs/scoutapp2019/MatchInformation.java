@@ -17,17 +17,21 @@ public class MatchInformation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Creates the Match Information activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_information);
 
+        //Creates the buttons, radiobuttons, and edittexts
         Button startMatchButton = (Button)findViewById(R.id.startMatchButton);
         final EditText matchNumberEditText = (EditText)findViewById(R.id.matchNumberEditText);
         final RadioButton allianceBlue = (RadioButton)findViewById(R.id.allianceBlue);
         final RadioButton allianceRed = (RadioButton)findViewById(R.id.allianceRed);
 
+        //Adds a listener for the Start Match Button
         startMatchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Checks to see what alliance color the team is
                 if(allianceBlue.isChecked()) {
                     blueTeam = true;
                 }
@@ -36,6 +40,7 @@ public class MatchInformation extends AppCompatActivity {
                     blueTeam = false;
                 }
 
+                //Checks to make sure a match number is put in
                 String checkInput = matchNumberEditText.getText().toString();
                 if (checkInput.matches("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MatchInformation.this);
