@@ -24,17 +24,4 @@
         android:text="Button"
         tools:layout_editor_absoluteX="108dp"
         tools:layout_editor_absoluteY="94dp" />
-</android
-
-
-
-
-
-
-
-
-
-
-
-
-    .support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
