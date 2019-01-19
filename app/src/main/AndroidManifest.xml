@@ -24,7 +24,9 @@
         <activity
             android:name=".MatchInformation"
             android:screenOrientation="portrait" />
-        <activity android:name=".MatchData">
+        <activity
+            android:name=".MatchData"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
