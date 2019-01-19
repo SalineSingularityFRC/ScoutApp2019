@@ -240,6 +240,78 @@ public class DatabaseClass {
         }
     }
 
+    public static void addRocketSecondLevelCargo(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketSecondLevelCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").remove(tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketSecondLevelHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketSecondLevelHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").remove(tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketThirdLevelCargo(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketThirdLevelCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").remove(tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").length()-1);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketThirdLevelHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketThirdLevelHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").remove(tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void setClimbSkill(int skill) {
+        try {
+            tempRobotMatchData.put("climbSkill", skill);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void finishMatch(){
         if(tempRobotMatchData==null){
             return;
