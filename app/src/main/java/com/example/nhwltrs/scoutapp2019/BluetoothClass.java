@@ -39,7 +39,7 @@ public class BluetoothClass {
         @Override
         public void onMessage(String message) {
             pendingData="";
-            //DatabaseGrant.dataSent(message);
+            DatabaseClass.dataSent(message);
             Log.i(tag,"Data transfer complete!");
         }
 
@@ -78,6 +78,14 @@ public class BluetoothClass {
                     bluetooth.connectToAddress(match);
                 }
             },3000);
+    }
+
+    public void send(String data){
+        if(pendingData.length()==0)
+            bluetooth.connectToAddress(match);
+        //pendingData+=data;
+        pendingData=data;
+
     }
 
     public void end(){
