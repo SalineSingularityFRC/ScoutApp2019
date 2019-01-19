@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScoutApp2019.iml" filepath="$PROJECT_DIR$/ScoutApp2019.iml" />
-      <module fileurl="file://D:\Studio_Projects\ScoutApp2018\ScoutApp2019\.idea\ScoutApp2019.iml" filepath="D:\Studio_Projects\ScoutApp2018\ScoutApp2019\.idea\ScoutApp2019.iml" />
-      <module fileurl="file://C:\Users\nhwlt\nhwlt\AndroidStudioProjects\SalineSingularity\ScoutApp2019\ScoutApp2019.iml" filepath="C:\Users\nhwlt\nhwlt\AndroidStudioProjects\SalineSingularity\ScoutApp2019\ScoutApp2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../nhwlt/nhwlt/AndroidStudioProjects/SalineSingularity/ScoutApp2019/ScoutApp2019.iml" filepath="$PROJECT_DIR$/../../../nhwlt/nhwlt/AndroidStudioProjects/SalineSingularity/ScoutApp2019/ScoutApp2019.iml" />
+      <module fileurl="file://D:/Studio_Projects/ScoutApp2018/ScoutApp2019/.idea/ScoutApp2019.iml" filepath="D:/Studio_Projects/ScoutApp2018/ScoutApp2019/.idea/ScoutApp2019.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

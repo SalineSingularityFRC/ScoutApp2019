@@ -11,108 +11,82 @@
         android:id="@+id/startingPositionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
         android:text="Starting Position"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/spinner"
+        tools:layout_editor_absoluteX="58dp" />
 
     <CheckBox
         android:id="@+id/level2Checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="15dp"
         android:text="Level 2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/startingPositionTextView"
+        tools:layout_editor_absoluteX="112dp" />
 
     <TextView
         android:id="@+id/gamePieceBotTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="140dp"
         android:text="Game Piece Bot:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/gamePieceSpinner"
+        tools:layout_editor_absoluteX="63dp" />
 
     <TextView
         android:id="@+id/fieldHatchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="15dp"
         android:text="Field Hatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gamePieceSpinner"
+        tools:layout_editor_absoluteX="96dp" />
 
     <TextView
         android:id="@+id/fieldCargoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginLeft="244dp"
         android:text="Field Cargo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/fieldHatchTextView"
+        app:layout_constraintTop_toTopOf="@+id/fieldHatchTextView" />
 
     <Spinner
         android:id="@+id/gamePieceSpinner"
         android:layout_width="305dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="132dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/level2Checkbox"
+        tools:layout_editor_absoluteX="227dp" />
 
     <EditText
         android:id="@+id/fieldHatchEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/fieldCargoEditCargo"
+        app:layout_constraintTop_toBottomOf="@+id/fieldHatchTextView" />
 
     <EditText
         android:id="@+id/fieldCargoEditCargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="252dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/fieldHatchEditText"
+        tools:layout_editor_absoluteX="372dp" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="384dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="169dp" />
 </android.support.constraint.ConstraintLayout>
