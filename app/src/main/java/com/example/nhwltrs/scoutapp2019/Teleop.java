@@ -181,7 +181,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     if(rocket1CargoCounter > 0) {
                         rocket1CargoCounter--;
-                        rocket1CargoCounterTextView.setText(rocket1HatchCounter + "");
+                        rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
                     }
                 }
             });
