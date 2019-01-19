@@ -14,6 +14,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="10dp"
         android:text="Cargo"
+        android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/cargoMinusButton2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,6 +157,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Hatch"
+        android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -203,6 +205,7 @@
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 3"
         android:textSize="25sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/rocket2TextView"
         app:layout_constraintTop_toBottomOf="@+id/rocket2TextView" />
 
@@ -213,6 +216,7 @@
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 2"
         android:textSize="25sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/rocket1TextView"
         app:layout_constraintTop_toBottomOf="@+id/rocket1TextView" />
 
@@ -224,6 +228,7 @@
         android:layout_marginTop="50dp"
         android:text="Cargo Ship"
         android:textSize="25sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/hatchTextView" />
 
@@ -341,6 +346,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 1"
+        android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="@+id/cargoShipTextView"
         app:layout_constraintTop_toBottomOf="@+id/cargoShipTextView" />
@@ -351,6 +357,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
         android:text="-"
+        android:textColor="#000000"
         android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoShipTextView"
@@ -375,7 +382,7 @@
 
     <Spinner
         android:id="@+id/climbingSpinner"
-        android:layout_width="176dp"
+        android:layout_width="200dp"
         android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/climbingTextView"
         app:layout_constraintEnd_toEndOf="@+id/rocket3PlusButton2"
@@ -388,6 +395,7 @@
         android:layout_marginTop="20dp"
         android:text="Climbing"
         android:textSize="25sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/rocket3TextView"
         app:layout_constraintTop_toBottomOf="@+id/rocket3TextView" />
 
@@ -401,6 +409,7 @@
         android:background="@drawable/endgame_rounded_button"
         android:text="End Game"
         android:textSize="25sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
