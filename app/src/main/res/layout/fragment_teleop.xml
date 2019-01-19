@@ -215,12 +215,10 @@
 
     <TextView
         android:id="@+id/cargoShipHatchCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/cargoPlusButton"
@@ -230,12 +228,10 @@
 
     <TextView
         android:id="@+id/rocket1HatchCounterTextView3"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="17dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginStart="17dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton"
@@ -244,12 +240,10 @@
 
     <TextView
         android:id="@+id/rocket1HatchCounterTextView2"
-        android:layout_width="13dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton"
@@ -258,12 +252,10 @@
 
     <TextView
         android:id="@+id/cargoShipCargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/cargoPlusButton2"
@@ -273,12 +265,10 @@
 
     <TextView
         android:id="@+id/rocket1CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton2"
@@ -288,12 +278,10 @@
 
     <TextView
         android:id="@+id/rocket2CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginStart="18dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton2"
@@ -303,12 +291,10 @@
 
     <TextView
         android:id="@+id/rocket3CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginStart="18dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton2"
@@ -317,12 +303,10 @@
 
     <TextView
         android:id="@+id/rocket2HatchCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton"
