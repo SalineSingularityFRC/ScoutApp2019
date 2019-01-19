@@ -28,6 +28,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket3PlusButton" />
@@ -39,6 +40,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket2PlusButton" />
@@ -49,6 +51,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3PlusButton" />
@@ -59,6 +62,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket2PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2PlusButton" />
@@ -69,6 +73,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket1PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1PlusButton" />
@@ -79,6 +84,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton2" />
@@ -89,6 +95,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoPlusButton"
         app:layout_constraintTop_toTopOf="@+id/cargoPlusButton" />
@@ -100,6 +107,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3MinusButton" />
@@ -111,6 +119,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton" />
@@ -122,6 +131,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoMinusButton"
         app:layout_constraintTop_toTopOf="@+id/cargoMinusButton" />
@@ -130,9 +140,10 @@
         android:id="@+id/cargoPlusButton2"
         android:layout_width="44dp"
         android:layout_height="38dp"
-        android:layout_marginStart="52dp"
-        android:text="+"
+        android:layout_marginStart="50dp"
         android:background="@drawable/counter_rounded_button"
+        android:gravity="center"
+        android:text="+"
         app:layout_constraintStart_toEndOf="@+id/cargoMinusButton2"
         app:layout_constraintTop_toTopOf="@+id/cargoPlusButton" />
 
@@ -143,21 +154,22 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="Hatch"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.002" />
 
     <Button
         android:id="@+id/rocket2MinusButton"
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/rocket1MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2TextView" />
@@ -169,6 +181,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2MinusButton" />
@@ -178,6 +191,7 @@
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/rocket2MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3TextView" />
@@ -215,13 +229,12 @@
 
     <TextView
         android:id="@+id/cargoShipHatchCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/cargoPlusButton"
         app:layout_constraintHorizontal_bias="0.526"
@@ -230,13 +243,12 @@
 
     <TextView
         android:id="@+id/rocket1HatchCounterTextView3"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="17dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginStart="17dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton"
@@ -244,13 +256,12 @@
 
     <TextView
         android:id="@+id/rocket1HatchCounterTextView2"
-        android:layout_width="13dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton"
@@ -258,13 +269,12 @@
 
     <TextView
         android:id="@+id/cargoShipCargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/cargoPlusButton2"
         app:layout_constraintHorizontal_bias="0.521"
@@ -273,13 +283,12 @@
 
     <TextView
         android:id="@+id/rocket1CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton2"
         app:layout_constraintHorizontal_bias="0.473"
@@ -288,13 +297,12 @@
 
     <TextView
         android:id="@+id/rocket2CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -303,13 +311,12 @@
 
     <TextView
         android:id="@+id/rocket3CargoCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginStart="18dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton2"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton2"
@@ -317,13 +324,12 @@
 
     <TextView
         android:id="@+id/rocket2HatchCounterTextView"
-        android:layout_width="15dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton"
@@ -345,6 +351,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoShipTextView"
         app:layout_constraintTop_toTopOf="@+id/cargoShipTextView" />
@@ -361,29 +368,28 @@
         android:layout_width="45dp"
         android:layout_height="38dp"
         android:text="-"
+        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/cargoMinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1TextView" />
 
     <Spinner
         android:id="@+id/climbingSpinner"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
+        android:layout_width="176dp"
+        android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/climbingTextView"
-        app:layout_constraintStart_toEndOf="@+id/climbingTextView"
-        app:layout_constraintTop_toTopOf="@+id/climbingTextView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="@+id/rocket3PlusButton2"
+        app:layout_constraintTop_toTopOf="@+id/climbingTextView" />
 
     <TextView
         android:id="@+id/climbingTextView"
         android:layout_width="144dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="500dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
         android:text="Climbing"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/rocket3TextView" />
+        app:layout_constraintStart_toStartOf="@+id/rocket3TextView"
+        app:layout_constraintTop_toBottomOf="@+id/rocket3TextView" />
 
     <Button
         android:id="@+id/endGameButton"
