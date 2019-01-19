@@ -35,7 +35,7 @@
         android:id="@+id/matchStartButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="6dp"
         android:background="@drawable/endgame_rounded_button"
         android:text="START MATCH"
         android:textSize="20sp"

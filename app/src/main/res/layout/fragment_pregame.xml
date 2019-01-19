@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Level 2"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/startingPositionTextView"
         app:layout_constraintTop_toBottomOf="@+id/startingPositionTextView" />
 
@@ -34,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Robot Preload"
-        android:textSize="25sp"
         android:textColor="#000000"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="@+id/level2Checkbox"
         app:layout_constraintTop_toBottomOf="@+id/level2Checkbox" />
 
@@ -43,29 +44,24 @@
         android:id="@+id/fieldHatchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
         android:text="Hatches on Field"
-        android:textSize="25sp"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/robotPreloadTextView"
         app:layout_constraintTop_toBottomOf="@+id/robotPreloadTextView" />
 
     <TextView
         android:id="@+id/fieldCargoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginEnd="25dp"
         android:text="Cargo on Field"
-        android:textSize="25sp"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/fieldHatchEditText"
-        app:layout_constraintStart_toStartOf="@+id/fieldHatchEditText"
-        app:layout_constraintTop_toBottomOf="@+id/fieldHatchEditText" />
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/fieldHatchTextView" />
 
     <Spinner
         android:id="@+id/gamePieceSpinner"
