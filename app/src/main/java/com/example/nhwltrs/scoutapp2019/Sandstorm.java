@@ -9,7 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Sandstorm extends Fragment {
-    private static final String TAG = "Sandstorm";
+    private static final String TAG =
+            "Sandstorm";
 
     public Sandstorm() {
         // Required empty public constructor
