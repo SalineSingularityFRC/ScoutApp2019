@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nhwltrs.scoutapp2019.MatchInformation"
-    android:background="#e6c902">
+    android:background="#ffffff">
 
     <TextView
         android:id="@+id/matchNumberTextView"
@@ -44,9 +44,10 @@
     <Button
         android:id="@+id/startMatchButton"
         android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/endgame_rounded_button"
         android:text="Start Match"
-        android:textSize="36sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

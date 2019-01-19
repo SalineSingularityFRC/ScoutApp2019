@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nhwltrs.scoutapp2019.Teams"
-    android:background="#e6c902">
+    android:background="#ffffff">
 
     <Button
         android:id="@+id/newTeamsButton"
@@ -15,6 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="New Team"
+        android:background="@drawable/endgame_rounded_button"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
