@@ -30,7 +30,7 @@ public class Teleop extends Fragment {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_sandstorm, container, false);
+            View view = inflater.inflate(R.layout.fragment_teleop, container, false);
 
             //Setting buttons to variables
             Button cargoPlusButton = (Button) view.findViewById(R.id.cargoPlusButton);
@@ -138,18 +138,6 @@ public class Teleop extends Fragment {
                     }
                 }
             });
-
-
-
-
-
-
-
-
-
-
-
-
 
             cargoPlusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
