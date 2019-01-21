@@ -125,6 +125,10 @@ public class DatabaseClass {
                     "\"team\":" + teamNumber + "," +
                     "\"matchID\":\"" + match + "\"," +
                     "\"onBlue\":"+onBlue+"," +
+                    "\"startingPos\":-1," + //-1 is error, 1 is middle, 2 is close, 3 is far, - if level 2
+                    "\"hatchesOnField\":-1," + //is the number of hatches on the field
+                    "\"cargoOnField\":-1," + //is the number of cargo on the field
+                    "\"sandstormSkill\":-1," + //-1 is error, 0 is nothing, 1 is moved, 2 is cargo ship hatch, 3 is level 1 hatch, 4 is level 2 hatch, 5 is level 3 hatch, 6 is cargo ship cargo, 7 is level 1, 8 is level 2 cargo, 9 is level 2 cargo
                     "\"cargoShipCargo\":[]," +
                     "\"cargoShipHatch\":[]," +
                     "\"rocketFirstLevelCargo\":[]," +
@@ -133,13 +137,177 @@ public class DatabaseClass {
                     "\"rocketFirstLevelHatch\":[]," +
                     "\"rocketSecondLevelHatch\":[]," +
                     "\"rocketThirdLevelHatch\":[]," +
-                    "\"startingPos\":-1," + //-1 is error, 1 is middle, 2 is close, 3 is far, - if level 2
-                    "\"sandstormSkill\":-1," + //-1 is error, 0 is nothing, 1 is moved, 2 is cargo ship hatch, 3 is level 1 hatch, 4 is level 2 hatch, 5 is level 3 hatch, 6 is cargo ship cargo, 7 is level 1, 8 is level 2 cargo, 9 is level 2 cargo
-                    "\"hatchesOnField\":[]," +
-                    "\"cargoOnField\":[]," +
                     "\"climbingAbility\":-1," + //-1 is error, 0 is nothing, 1 is level 1, 2 is level 2, 3 is level 3
                     "}");
         } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void setStartingPos(int pos){
+        try{
+            tempRobotMatchData.put("startingPos", pos);
+        } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void setPreLoadHatch(int hatches){
+        try{
+            tempRobotMatchData.put("hatchesOnField", hatches);
+        } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void setPreLoadCargo(int cargo){
+        try{
+            tempRobotMatchData.put("cargoOnField", cargo);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void setSandstormSkill(int skill){
+        try{
+            tempRobotMatchData.put("sandstormSkill", skill);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addCargoShipCargo(int ms){
+        try{
+            tempRobotMatchData.getJSONArray("cargoShipCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeCargoShipCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("cargoShipCargo").remove(tempRobotMatchData.getJSONArray("cargoShipCargo").length()-1);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addCargoShipHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("cargoShipHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeCargoShipHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("cargoShipHatch").remove(tempRobotMatchData.getJSONArray("cargoShipHatch").length()-1);
+        } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketFirstLevelCargo(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketFirstLevelCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketFirstLevelCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketFirstLevelCargo").remove(tempRobotMatchData.getJSONArray("rocketFirstLevelCargo").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketFirstLevelHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketFirstLevelHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketFirstLevelHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketFirstLevelHatch").remove(tempRobotMatchData.getJSONArray("rocketFirstLevelHatch").length()-1);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketSecondLevelCargo(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketSecondLevelCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").remove(tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketSecondLevelHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketSecondLevelHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").remove(tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketThirdLevelCargo(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketThirdLevelCargo() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").remove(tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").length()-1);
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addRocketThirdLevelHatch(int ms) {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").put(new JSONObject("{\"time\":" + ms + "}"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeRocketThirdLevelHatch() {
+        try {
+            tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").remove(tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").length()-1);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void setClimbSkill(int skill) {
+        try {
+            tempRobotMatchData.put("climbSkill", skill);
+        } catch (JSONException e) {
             e.printStackTrace();
         }
     }

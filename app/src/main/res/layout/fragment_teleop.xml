@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="@+id/rocket3PlusButton" />
 
     <Button
-        android:id="@+id/rocket1PlusButton2"
+        android:id="@+id/rocket2PlusButton2"
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:layout_marginStart="50dp"
@@ -80,13 +80,13 @@
         app:layout_constraintTop_toTopOf="@+id/rocket1PlusButton" />
 
     <Button
-        android:id="@+id/rocket2PlusButton2"
+        android:id="@+id/rocket1PlusButton2"
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:layout_marginStart="50dp"
-        android:text="+"
-        android:gravity="center"
         android:background="@drawable/counter_rounded_button"
+        android:gravity="center"
+        android:text="+"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton2" />
 
@@ -247,26 +247,26 @@
         app:layout_constraintTop_toTopOf="@+id/cargoMinusButton" />
 
     <TextView
-        android:id="@+id/rocket1HatchCounterTextView3"
+        android:id="@+id/rocket1HatchCounterTextView"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginEnd="18dp"
         android:layout_marginStart="17dp"
-        android:text="0"
         android:gravity="center"
+        android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton" />
 
     <TextView
-        android:id="@+id/rocket1HatchCounterTextView2"
+        android:id="@+id/rocket3HatchCounterTextView"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="0"
         android:gravity="center"
+        android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton"
@@ -309,7 +309,7 @@
         android:text="0"
         android:gravity="center"
         android:textSize="25sp"
-        app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton2"
+        app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket2MinusButton2" />
