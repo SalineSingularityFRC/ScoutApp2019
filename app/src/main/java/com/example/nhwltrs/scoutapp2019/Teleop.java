@@ -1,6 +1,7 @@
 package com.example.nhwltrs.scoutapp2019;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -255,12 +256,16 @@ public class Teleop extends Fragment {
                     String startingPos = climbing.getSelectedItem().toString();
                     switch (startingPos) {
                         case "None":
+                            //DatabaseClass.setClimbSkill(0);
                             break;
                         case "Level 1":
+                            //DatabaseClass.setClimbSkill(1);
                             break;
                         case "Level 2":
+                            //DatabaseClass.setClimbSkill(2);
                             break;
                         case "Level 3":
+                            //DatabaseClass.setClimbSkill(3);
                             break;
                     }
                 }
