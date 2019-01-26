@@ -66,7 +66,7 @@
         android:textColor="#000000"
         android:fontFamily="@font/product_sans"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerStartPosition"
         app:layout_constraintTop_toTopOf="@+id/fieldHatchTextView" />
 
     <Spinner
@@ -75,7 +75,7 @@
         android:layout_height="32dp"
         android:fontFamily="@font/product_sans"
         app:layout_constraintBottom_toBottomOf="@+id/robotPreloadTextView"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerStartPosition"
         app:layout_constraintTop_toTopOf="@+id/robotPreloadTextView" />
 
     <EditText
@@ -112,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fieldCargoTextView" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerStartPosition"
         android:layout_width="200dp"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
