@@ -5,8 +5,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Teleop extends Fragment {
     private static final String TAG = "Teleop";
@@ -208,6 +214,51 @@ public class Teleop extends Fragment {
                     }
                 }
             });
+
+            final Spinner climbing = (Spinner) view.findViewById(R.id.climbingSpinner);
+
+            List<String> list = new ArrayList<String>();
+            list.add("None");
+            list.add("Level 1");
+            list.add("Level 2");
+            list.add("Level 3");
+            final int listsize = list.size();
+            list.add("None"); //This is correct
+
+            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, list) {
+                @Override
+                public int getCount() {
+                    return (listsize);
+                }
+            };
+            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            climbing.setAdapter(dataAdapter);
+            climbing.setSelection(listsize);
+
+            //Database stuff
+            climbing.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    String startingPos = climbing.getSelectedItem().toString();
+                    switch (startingPos) {
+                        case "None":
+                            break;
+                        case "Level 1":
+                            break;
+                        case "Level 2":
+                            break;
+                        case "Level 3":
+                            break;
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+
+            });
+
 
             return view;
     }
