@@ -14,6 +14,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="10dp"
         android:text="Cargo"
+        android:fontFamily="@font/product_sans"
         android:textSize="25sp"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/cargoMinusButton2"
@@ -29,6 +30,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket3PlusButton" />
@@ -41,6 +43,7 @@
         android:layout_marginLeft="50dp"
         android:background="@drawable/counter_rounded_button"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket2PlusButton" />
 
@@ -50,6 +53,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3PlusButton" />
@@ -60,6 +64,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket2PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2PlusButton" />
@@ -70,6 +75,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket1PlusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1PlusButton" />
@@ -81,6 +87,7 @@
         android:layout_marginStart="50dp"
         android:background="@drawable/counter_rounded_button"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton2"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton2" />
 
@@ -90,6 +97,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoPlusButton"
         app:layout_constraintTop_toTopOf="@+id/cargoPlusButton" />
@@ -101,6 +109,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3MinusButton" />
@@ -112,6 +121,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1MinusButton" />
@@ -123,6 +133,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoMinusButton"
         app:layout_constraintTop_toTopOf="@+id/cargoMinusButton" />
@@ -133,6 +144,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="52dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoMinusButton2"
         app:layout_constraintTop_toTopOf="@+id/cargoPlusButton" />
@@ -140,20 +152,23 @@
     <TextView
         android:id="@+id/hatchTextView"
         android:layout_width="68dp"
-        android:layout_height="38dp"
+        android:layout_height="0dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:text="Hatch"
+        android:fontFamily="@font/product_sans"
         android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="@+id/exitHabitatCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/exitHabitatCheckBox" />
+        app:layout_constraintTop_toBottomOf="@+id/exitHabitatCheckBox"
+        tools:layout_editor_absoluteY="455dp" />
 
     <Button
         android:id="@+id/rocket2MinusButton"
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/rocket1MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2TextView" />
@@ -165,6 +180,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:text="+"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/rocket2MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket2MinusButton" />
@@ -174,6 +190,7 @@
         android:layout_width="44dp"
         android:layout_height="38dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/rocket2MinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket3TextView" />
@@ -185,6 +202,7 @@
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 3"
         android:textSize="25sp"
+        android:fontFamily="@font/product_sans"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/rocket2TextView"
         app:layout_constraintTop_toBottomOf="@+id/rocket2TextView" />
@@ -196,6 +214,7 @@
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 2"
         android:textSize="25sp"
+        android:fontFamily="@font/product_sans"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/rocket1TextView"
         app:layout_constraintTop_toBottomOf="@+id/rocket1TextView" />
@@ -207,6 +226,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
         android:textColor="#000000"
+        android:fontFamily="@font/product_sans"
         android:text="Cargo Ship"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -221,6 +241,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/cargoPlusButton"
@@ -238,6 +259,7 @@
         android:layout_marginRight="18dp"
         android:gravity="center"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket1PlusButton"
         app:layout_constraintStart_toEndOf="@+id/rocket1MinusButton"
@@ -249,6 +271,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:fontFamily="@font/product_sans"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
@@ -262,6 +285,7 @@
         android:id="@+id/cargoShipCargoCounterTextView"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:fontFamily="@font/product_sans"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
@@ -283,6 +307,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton2"
@@ -298,6 +323,7 @@
         android:layout_marginEnd="17dp"
         android:gravity="center"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -314,6 +340,7 @@
         android:layout_marginRight="17dp"
         android:gravity="center"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket3PlusButton2"
         app:layout_constraintStart_toEndOf="@+id/rocket3MinusButton2"
@@ -328,6 +355,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="0"
+        android:fontFamily="@font/product_sans"
         android:gravity="center"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@+id/rocket2PlusButton"
@@ -341,6 +369,7 @@
         android:layout_marginTop="20dp"
         android:text="Rocket Lvl 1"
         android:textSize="25sp"
+        android:fontFamily="@font/product_sans"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/cargoShipTextView"
         app:layout_constraintTop_toBottomOf="@+id/cargoShipTextView" />
@@ -351,6 +380,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toEndOf="@+id/cargoShipTextView"
         app:layout_constraintTop_toTopOf="@+id/cargoShipTextView" />
@@ -367,6 +397,7 @@
         android:layout_width="45dp"
         android:layout_height="38dp"
         android:text="-"
+        android:fontFamily="@font/product_sans"
         android:background="@drawable/counter_rounded_button"
         app:layout_constraintStart_toStartOf="@+id/cargoMinusButton"
         app:layout_constraintTop_toTopOf="@+id/rocket1TextView" />
@@ -380,6 +411,7 @@
         android:layout_marginTop="20dp"
         android:text="Exit Habitat"
         android:textSize="25sp"
+        android:fontFamily="@font/product_sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
