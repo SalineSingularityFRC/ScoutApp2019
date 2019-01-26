@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class Sandstorm extends Fragment {
@@ -156,18 +157,7 @@ public class Sandstorm extends Fragment {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
+        //Second Column starts
         cargoPlusButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -242,6 +232,14 @@ public class Sandstorm extends Fragment {
                     rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
                     //DatabaseClass.setSandstormSkill(0);
                 }
+            }
+        });
+
+        final CheckBox exitHabitat = (CheckBox)view.findViewById(R.id.exitHabitatCheckBox);
+        exitHabitat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
