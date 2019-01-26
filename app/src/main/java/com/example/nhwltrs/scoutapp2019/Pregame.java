@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -121,6 +122,14 @@ public class Pregame extends Fragment {
                     //DatabaseClass.setRobotPreload(0);
                 }
         });
+        final CheckBox level2 = (CheckBox)view.findViewById(R.id.level2Checkbox);
+        level2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         return view;
     };
 }
