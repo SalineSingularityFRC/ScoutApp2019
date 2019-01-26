@@ -17,9 +17,6 @@ import java.util.List;
 public class Teleop extends Fragment {
     private static final String TAG = "Teleop";
 
-    public Teleop() {
-        // Required empty public constructor
-    }
         //Creating counter variables
         int cargoShipHatchCounter = 0;
         int rocket1HatchCounter = 0;
@@ -80,6 +77,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     cargoShipHatchCounter++;
                     cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
+                    //DatabaseClass.addCargoShipHatch(parent.getTimer());
                 }
             });
 
@@ -89,6 +87,7 @@ public class Teleop extends Fragment {
                     if(cargoShipHatchCounter>0) {
                         cargoShipHatchCounter--;
                         cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
+                        //DatabaseClass.removeCargoShipHatch();
                     }
                 }
             });
@@ -98,6 +97,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket1HatchCounter++;
                     rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
+                    //DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
                 }
             });
             rocket1MinusButton.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +106,7 @@ public class Teleop extends Fragment {
                     if(rocket1HatchCounter > 0) {
                         rocket1HatchCounter--;
                         rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
+                        //DatabaseClass.removeRocketFirstLevelHatch();
                     }
                 }
             });
@@ -116,6 +117,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket2HatchCounter++;
                     rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
+                    //DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
                 }
             });
             rocket2MinusButton.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +126,7 @@ public class Teleop extends Fragment {
                     if(rocket2HatchCounter > 0) {
                         rocket2HatchCounter--;
                         rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
+                        //DatabaseClass.removeRocketSecondLevelHatch();
                     }
                 }
             });
@@ -133,6 +136,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket3HatchCounter++;
                     rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
+                    //DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
                 }
             });
             rocket3MinusButton.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +145,7 @@ public class Teleop extends Fragment {
                     if(rocket3HatchCounter > 0) {
                         rocket3HatchCounter--;
                         rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
+                        //DatabaseClass.removeRocketThirdLevelHatch();
                     }
                 }
             });
@@ -150,6 +155,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     cargoShipCargoCounter++;
                     cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
+                    //DatabaseClass.addCargoShipCargo(parent.getTimer());
                 }
             });
 
@@ -159,6 +165,7 @@ public class Teleop extends Fragment {
                     if(cargoShipCargoCounter>0) {
                         cargoShipCargoCounter--;
                         cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
+                        //DatabaseClass.removeCargoShipCargo();
                     }
                 }
             });
@@ -168,6 +175,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket1CargoCounter++;
                     rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
+                    //DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
                 }
             });
             rocket1MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -176,6 +184,7 @@ public class Teleop extends Fragment {
                     if(rocket1CargoCounter > 0) {
                         rocket1CargoCounter--;
                         rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
+                        //DatabaseClass.removeRocketFirstLevelCargo();
                     }
                 }
             });
@@ -186,6 +195,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket2CargoCounter++;
                     rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
+                    //DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
                 }
             });
             rocket2MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +204,7 @@ public class Teleop extends Fragment {
                     if(rocket2CargoCounter > 0) {
                         rocket2CargoCounter--;
                         rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
+                        //DatabaseClass.removeRocketSecondLevelCargo();
                     }
                 }
             });
@@ -203,6 +214,7 @@ public class Teleop extends Fragment {
                 public void onClick(View view) {
                     rocket3CargoCounter++;
                     rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
+                    //DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
                 }
             });
             rocket3MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -211,6 +223,7 @@ public class Teleop extends Fragment {
                     if(rocket3CargoCounter > 0) {
                         rocket3CargoCounter--;
                         rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
+                        //DatabaseClass.removeRocketThirdLevelCargo();
                     }
                 }
             });
