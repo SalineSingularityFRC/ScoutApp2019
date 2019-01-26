@@ -82,7 +82,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 cargoShipHatchCounter++;
                 cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                //DatabaseClass.addCargoShipHatch(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(2);
             }
         });
 
@@ -92,7 +92,7 @@ public class Sandstorm extends Fragment {
                 if(cargoShipHatchCounter>0) {
                     cargoShipHatchCounter--;
                     cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                    //DatabaseClass.removeCargoShipHatch();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -102,7 +102,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket1HatchCounter++;
                 rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                //DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(3);
             }
         });
 
@@ -112,7 +112,7 @@ public class Sandstorm extends Fragment {
                 if(rocket1HatchCounter > 0) {
                     rocket1HatchCounter--;
                     rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                    //DatabaseClass.removeRocketFirstLevelHatch();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -123,7 +123,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket2HatchCounter++;
                 rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                //DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(4);
             }
         });
 
@@ -133,7 +133,7 @@ public class Sandstorm extends Fragment {
                 if(rocket2HatchCounter > 0) {
                     rocket2HatchCounter--;
                     rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                    //DatabaseClass.removeRocketSecondLevelHatch();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -143,7 +143,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket3HatchCounter++;
                 rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                //DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(5);
             }
         });
         rocket3MinusButton.setOnClickListener(new View.OnClickListener() {
@@ -152,7 +152,7 @@ public class Sandstorm extends Fragment {
                 if(rocket3HatchCounter > 0) {
                     rocket3HatchCounter--;
                     rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                    //DatabaseClass.removeRocketThirdLevelHatch();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -163,7 +163,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 cargoShipCargoCounter++;
                 cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                //DatabaseClass.addCargoShipCargo(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(6);
             }
         });
         cargoMinusButton2.setOnClickListener(new View.OnClickListener(){
@@ -172,7 +172,7 @@ public class Sandstorm extends Fragment {
                 if(cargoShipCargoCounter>0) {
                     cargoShipCargoCounter--;
                     cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                    //DatabaseClass.removeCargoShipCargo();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -182,7 +182,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket1CargoCounter++;
                 rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                //DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(7);
             }
         });
         rocket1MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -191,7 +191,7 @@ public class Sandstorm extends Fragment {
                 if(rocket1CargoCounter > 0) {
                     rocket1CargoCounter--;
                     rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                    //DatabaseClass.removeRocketFirstLevelCargo();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -202,7 +202,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket2CargoCounter++;
                 rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                //DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(8);
             }
         });
         rocket2MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -211,7 +211,7 @@ public class Sandstorm extends Fragment {
                 if(rocket2CargoCounter > 0) {
                     rocket2CargoCounter--;
                     rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                    //DatabaseClass.removeRocketSecondLevelCargo();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
@@ -221,7 +221,7 @@ public class Sandstorm extends Fragment {
             public void onClick(View view) {
                 rocket3CargoCounter++;
                 rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                //DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                //DatabaseClass.setSandstormSkill(9);
             }
         });
         rocket3MinusButton2.setOnClickListener(new View.OnClickListener() {
@@ -230,7 +230,7 @@ public class Sandstorm extends Fragment {
                 if(rocket3CargoCounter > 0) {
                     rocket3CargoCounter--;
                     rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                    //DatabaseClass.removeRocketThirdLevelCargo();
+                    //DatabaseClass.setSandstormSkill(0);
                 }
             }
         });
