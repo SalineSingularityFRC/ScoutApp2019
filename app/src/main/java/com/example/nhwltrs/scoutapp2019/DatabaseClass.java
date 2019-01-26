@@ -126,6 +126,7 @@ public class DatabaseClass {
                     "\"matchID\":\"" + match + "\"," +
                     "\"onBlue\":"+onBlue+"," +
                     "\"startingPos\":-1," + //-1 is error, 1 is middle, 2 is close, 3 is far, - if level 2
+                    "\"robotPreload\":-1" + //-1 is error, 0 is nothing, 1 is cargo, 2 is hatch
                     "\"hatchesOnField\":-1," + //is the number of hatches on the field
                     "\"cargoOnField\":-1," + //is the number of cargo on the field
                     "\"sandstormSkill\":-1," + //-1 is error, 0 is nothing, 1 is moved, 2 is cargo ship hatch, 3 is level 1 hatch, 4 is level 2 hatch, 5 is level 3 hatch, 6 is cargo ship cargo, 7 is level 1, 8 is level 2 cargo, 9 is level 2 cargo
@@ -148,6 +149,14 @@ public class DatabaseClass {
         try{
             tempRobotMatchData.put("startingPos", pos);
         } catch(JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void setRobotPreload(int pre) {
+        try{
+            tempRobotMatchData.put("robotPreload", pre);
+        } catch(JSONException e) {
             e.printStackTrace();
         }
     }
