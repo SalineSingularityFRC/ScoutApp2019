@@ -239,7 +239,7 @@ public class Sandstorm extends Fragment {
         exitHabitat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //DatabaseClass.setSandstormSkill(1);
             }
         });
 
