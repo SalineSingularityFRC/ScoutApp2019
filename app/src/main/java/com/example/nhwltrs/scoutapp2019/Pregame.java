@@ -1,5 +1,6 @@
 package com.example.nhwltrs.scoutapp2019;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -23,6 +23,11 @@ public class Pregame extends Fragment {
         // Required empty public constructor
     }
 
+    MatchData parent;
+    @SuppressLint("ValidFragment")
+    public Pregame(MatchData matchData) {
+        parent = matchData;
+    }
 
 
     @Override
@@ -55,10 +60,13 @@ public class Pregame extends Fragment {
                 String startingPos = startingPosition.getSelectedItem().toString();
                 switch (startingPos) {
                     case "Away":
+                        //DatabaseClass.setStartingPos(3);
                         break;
                     case "Middle":
+                        //DatabaseClass.setStartingPos(1);
                         break;
                     case "Closest":
+                        //DatabaseClass.setStartingPos(2);
                         break;
                 }
             }
@@ -87,7 +95,7 @@ public class Pregame extends Fragment {
         };
 
         dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        robotPreload.setAdapter(dataAdapter2);//This is the line that is screwed up
+        robotPreload.setAdapter(dataAdapter2);
         robotPreload.setSelection(listsize2);
 
             //Database stuff
@@ -97,28 +105,22 @@ public class Pregame extends Fragment {
                     String robotPre = robotPreload.getSelectedItem().toString();
                     switch(robotPre) {
                         case "Cargo":
+                            //DatabaseClass.setRobotPreload(1);
                             break;
                         case "Hatch":
+                            //DatabaseClass.setRobotPreload(2);
                             break;
                         case "None":
+                            //DatabaseClass.setRobotPreload(0);
                             break;
                     }
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> adapterView){
-
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    //DatabaseClass.setRobotPreload(0);
                 }
         });
-
-        final CheckBox level2 = (CheckBox)view.findViewById(R.id.level2Checkbox);
-        level2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         return view;
-    }
+    };
 }
