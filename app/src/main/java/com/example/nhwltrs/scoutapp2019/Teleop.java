@@ -272,7 +272,7 @@ public class Teleop extends Fragment {
 
                 @Override
                 public void onNothingSelected(AdapterView<?> adapterView) {
-
+                    //DatabaseClass.setClimbSkill(0);
                 }
 
             });
