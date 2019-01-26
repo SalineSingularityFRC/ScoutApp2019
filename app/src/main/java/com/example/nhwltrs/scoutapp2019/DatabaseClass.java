@@ -312,6 +312,78 @@ public class DatabaseClass {
         }
     }
 
+    public static int readCargoShipHatch() {
+        try {
+            return tempRobotMatchData.getJSONArray("cargoShipHatch").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readCargoShipCargo() {
+        try {
+            return tempRobotMatchData.getJSONArray("cargoShipCargo").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketFirstLevelHatch() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketFirstLevelHatch").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketFirstLevelCargo() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketFirstLevelCargo").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketSecondLevelHatch() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketSecondLevelHatch").length();
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketSecondLevelCargo() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketSecondLevelCargo").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketThirdLevelHatch() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketThirdLevelHatch").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static int readRocketThirdLevelCargo() {
+        try {
+            return tempRobotMatchData.getJSONArray("rocketThirdLevelCargo").length();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
     public static void finishMatch(){
         if(tempRobotMatchData==null){
             return;
