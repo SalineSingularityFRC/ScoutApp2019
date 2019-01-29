@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,8 @@ import java.util.List;
 
 public class Pregame extends Fragment {
     private static final String TAG = "Pregame";
+
+    String location = "";
 
     public Pregame() {
         // Required empty public constructor
@@ -36,6 +39,8 @@ public class Pregame extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pregame, container, false);
 
         final Spinner startingPosition = (Spinner) view.findViewById(R.id.spinnerStartPosition);
+
+        final CheckBox level2 = (CheckBox)view.findViewById(R.id.level2Checkbox);
 
         List<String> list = new ArrayList<String>();
         list.add("Away");
@@ -61,13 +66,25 @@ public class Pregame extends Fragment {
                 String startingPos = startingPosition.getSelectedItem().toString();
                 switch (startingPos) {
                     case "Away":
-                        //DatabaseClass.setStartingPos(3);
+                        if (level2.isChecked()) {
+                            //DatabaseClass.setStartingPos(-3);
+                        } else {
+                            //DatabaseClass.setStartingPos(3);
+                        }
+                        location = "Away";
                         break;
                     case "Middle":
                         //DatabaseClass.setStartingPos(1);
+                        location = "Middle";
                         break;
                     case "Closest":
-                        //DatabaseClass.setStartingPos(2);
+                        if (level2.isChecked()) {
+                            //DatabaseClass.setStartingPos(-2);
+                        }
+                        else {
+                            //DatabaseClass.setStartingPos(2);
+                        }
+                        location = "Closest";
                         break;
                 }
             }
@@ -122,11 +139,33 @@ public class Pregame extends Fragment {
                     //DatabaseClass.setRobotPreload(0);
                 }
         });
-        final CheckBox level2 = (CheckBox)view.findViewById(R.id.level2Checkbox);
         level2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (level2.isChecked()) {
+                    switch(location){
+                        case"Away":
+                            //DatabaseClass.setStartingPos(-3);
+                            break;
+                        case "Middle":
+                            break;
+                        case "Closest":
+                            //DatabaseClass.setStartingPos(-2);
+                            break;
+                    }
+                }
+                else {
+                    switch(location){
+                        case"Away":
+                            //DatabaseClass.setStartingPos(3);
+                            break;
+                        case "Middle":
+                            break;
+                        case "Closest":
+                            //DatabaseClass.setStartingPos(2);
+                            break;
+                    }
+                }
             }
         });
 
