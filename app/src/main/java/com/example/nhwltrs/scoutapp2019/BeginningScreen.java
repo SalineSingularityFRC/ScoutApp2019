@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class BeginningScreen extends AppCompatActivity {
-    //deric was here
+    public BluetoothClass bluetooth=new BluetoothClass(this);
     private boolean started=false;
 
     @Override
@@ -29,12 +29,21 @@ public class BeginningScreen extends AppCompatActivity {
             }
         });
 
+        DatabaseClass.setup(bluetooth);
+
         //Bluetooth code will go here
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
+        bluetooth.setup();
+
+        if(!started){
+            bluetooth.send("{\"teamData\":[],\"matchData\":[]}");
+            started=true;
+        }
 
         //Bluetooth code will go here
     }
@@ -44,6 +53,7 @@ public class BeginningScreen extends AppCompatActivity {
         super.onDestroy();
 
         //More bluetooth code
+        bluetooth.end();
     }
 
 }

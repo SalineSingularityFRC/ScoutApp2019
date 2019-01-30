@@ -35,8 +35,9 @@ public class Teams extends AppCompatActivity {
                 String teamNumber = ((TextView) view.findViewById(R.id.teamNumberTextView)).getText().toString();
                 //Match information code goes here
                 Intent matchInformation = new Intent(getApplicationContext(), MatchInformation.class);
+                matchInformation.putExtra("Team Number", teamNumber);
                 startActivity(matchInformation);
-
+                finish();
             }
         });
 
@@ -62,7 +63,19 @@ public class Teams extends AppCompatActivity {
         list.setAdapter(adapter);
 
         //Bluetooth code goes here
+        for(int i=0;i<DatabaseClass.getTeamDatabaseLength();i++) {
+            HashMap<String, String> resultsMap = new HashMap<>();
+            resultsMap.put("First Line", DatabaseClass.getTeamName(i));
+            resultsMap.put("Second Line", String.valueOf(DatabaseClass.getTeamNumber(i)));
+            listItems.add(resultsMap);
+        }
 
+        for(int i=0;i<DatabaseClass.getLocalTeamDatabaseLength();i++) {
+            HashMap<String, String> resultsMap = new HashMap<>();
+            resultsMap.put("First Line", DatabaseClass.getLocalTeamName(i));
+            resultsMap.put("Second Line", String.valueOf(DatabaseClass.getLocalTeamNumber(i)));
+            listItems.add(resultsMap);
+        }
 
         adapter.notifyDataSetChanged();
     }

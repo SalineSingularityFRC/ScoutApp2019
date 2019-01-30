@@ -1,8 +1,10 @@
 package com.example.nhwltrs.scoutapp2019;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +33,13 @@ public class Teleop extends Fragment {
 
         MatchData parent;
 
+    @SuppressLint("ValidFragment")
+    public Teleop(MatchData matchData) {
+        parent = matchData;
+    }
+
+    public Teleop(){
+        Log.e("7G7","Ouch, I'm not supposed to be here.");}
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -61,6 +70,8 @@ public class Teleop extends Fragment {
 
             Button rocket3PlusButton2 = (Button) view.findViewById(R.id.rocket3PlusButton2);
             Button rocket3MinusButton2 = (Button) view.findViewById(R.id.rocket3MinusButton2);
+
+            Button endGame = (Button) view.findViewById(R.id.endGameButton);
 
             //Setting counter values to the variables
             final TextView cargoShipHatchCounterTextView = (TextView) view.findViewById(R.id.cargoShipHatchCounterTextView);
@@ -277,8 +288,15 @@ public class Teleop extends Fragment {
 
             });
 
-
-
+            endGame.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (parent.started) {
+                        DatabaseClass.finishMatch();
+                        parent.finish();
+                    }
+                }
+            });
 
             return view;
     }
