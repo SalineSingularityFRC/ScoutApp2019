@@ -5,10 +5,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -129,6 +132,46 @@ public class Pregame extends Fragment {
 
             }
         });
+
+        final EditText hatchesOnField = (EditText) view.findViewById(R.id.fieldHatchEditText);
+        hatchesOnField.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(hatchesOnField.getText().toString().trim().equals("")) {
+                }
+                else {
+                    Integer intHatchesOnField = Integer.valueOf(hatchesOnField.getText().toString());
+                    //DatabaseClass.setPreLoadHatch(intHatchesOnField);
+                }
+            }
+        });
+
+        final EditText cargoOnField = (EditText) view.findViewById(R.id.fieldCargoEditText);
+        cargoOnField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(cargoOnField.getText().toString().trim().equals("")) {
+                }
+                else {
+                    Integer intCargoOnField = Integer.valueOf(cargoOnField.getText().toString());
+                    //DatabaseClass.setPreLoadHatch(intCargoOnField);
+                }
+            }
+        });
+
 
         return view;
     };
