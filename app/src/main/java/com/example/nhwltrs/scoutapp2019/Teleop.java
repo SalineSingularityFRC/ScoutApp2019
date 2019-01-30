@@ -291,10 +291,8 @@ public class Teleop extends Fragment {
             endGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (parent.started) {
-                        DatabaseClass.finishMatch();
-                        parent.finish();
-                    }
+                    //DatabaseClass.finishMatch();
+                    parent.finish();
                 }
             });
 

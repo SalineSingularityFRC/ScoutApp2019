@@ -79,7 +79,7 @@ public class MatchData extends AppCompatActivity {
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Pregame(), "Pregame");
         adapter.addFragment(new Sandstorm(), "Sandstorm");
-        adapter.addFragment(new Teleop(), "Teleop");
+        adapter.addFragment(new Teleop(this), "Teleop");
         viewPager.setAdapter(adapter);
     }
 
@@ -114,9 +114,5 @@ public class MatchData extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-    }
-
-    public int getTimer () {
-        return Seconds;
     }
 }
