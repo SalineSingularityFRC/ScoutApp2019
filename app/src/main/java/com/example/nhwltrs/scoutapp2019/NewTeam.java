@@ -68,7 +68,7 @@ public class NewTeam extends AppCompatActivity {
                 }
 
                 //Bluetooth code goes here
-
+                DatabaseClass.makeTeam(Integer.parseInt(checkTeamNumber),checkTeamName);
                 finish();
             }
         });

@@ -25,7 +25,7 @@ public class Teleop extends Fragment {
         int rocket1HatchCounter = 0;
         int rocket2HatchCounter = 0;
         int rocket3HatchCounter = 0;
-//im stpid
+
         int cargoShipCargoCounter = 0;
         int rocket1CargoCounter = 0;
         int rocket2CargoCounter = 0;
@@ -90,7 +90,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         cargoShipHatchCounter++;
                         cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                        //DatabaseClass.addCargoShipHatch(parent.getTimer());
+                        DatabaseClass.addCargoShipHatch(parent.getTimer());
                     }
                 }
             });
@@ -102,7 +102,7 @@ public class Teleop extends Fragment {
                         if(cargoShipHatchCounter>0) {
                             cargoShipHatchCounter--;
                             cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                            //DatabaseClass.removeCargoShipHatch();
+                            DatabaseClass.removeCargoShipHatch();
                         }
                     }
                 }
@@ -114,7 +114,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket1HatchCounter++;
                         rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                        //DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                        DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
                     }
                 }
             });
@@ -125,7 +125,7 @@ public class Teleop extends Fragment {
                         if(rocket1HatchCounter > 0) {
                             rocket1HatchCounter--;
                             rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                            //DatabaseClass.removeRocketFirstLevelHatch();
+                            DatabaseClass.removeRocketFirstLevelHatch();
                         }
                     }
                 }
@@ -138,7 +138,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket2HatchCounter++;
                         rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                        //DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                        DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
                     }
                 }
             });
@@ -149,7 +149,7 @@ public class Teleop extends Fragment {
                         if(rocket2HatchCounter > 0) {
                             rocket2HatchCounter--;
                             rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                            //DatabaseClass.removeRocketSecondLevelHatch();
+                            DatabaseClass.removeRocketSecondLevelHatch();
                         }
                     }
                 }
@@ -161,7 +161,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket3HatchCounter++;
                         rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                        //DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                        DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
                     }
                 }
             });
@@ -172,7 +172,7 @@ public class Teleop extends Fragment {
                         if(rocket3HatchCounter > 0) {
                             rocket3HatchCounter--;
                             rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                            //DatabaseClass.removeRocketThirdLevelHatch();
+                            DatabaseClass.removeRocketThirdLevelHatch();
                         }
                     }
                 }
@@ -184,7 +184,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         cargoShipCargoCounter++;
                         cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                        //DatabaseClass.addCargoShipCargo(parent.getTimer());
+                        DatabaseClass.addCargoShipCargo(parent.getTimer());
                     }
                 }
             });
@@ -196,7 +196,7 @@ public class Teleop extends Fragment {
                         if(cargoShipCargoCounter>0) {
                             cargoShipCargoCounter--;
                             cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                            //DatabaseClass.removeCargoShipCargo();
+                            DatabaseClass.removeCargoShipCargo();
                         }
                     }
                 }
@@ -208,7 +208,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket1CargoCounter++;
                         rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                        //DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                        DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
                     }
                 }
             });
@@ -219,7 +219,7 @@ public class Teleop extends Fragment {
                         if(rocket1CargoCounter > 0) {
                             rocket1CargoCounter--;
                             rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                            //DatabaseClass.removeRocketFirstLevelCargo();
+                            DatabaseClass.removeRocketFirstLevelCargo();
                         }
                     }
                 }
@@ -232,7 +232,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket2CargoCounter++;
                         rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                        //DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                        DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
                     }
                 }
             });
@@ -243,7 +243,7 @@ public class Teleop extends Fragment {
                         if (rocket2CargoCounter > 0) {
                             rocket2CargoCounter--;
                             rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                            //DatabaseClass.removeRocketSecondLevelCargo();
+                            DatabaseClass.removeRocketSecondLevelCargo();
                         }
                     }
                 }
@@ -255,7 +255,7 @@ public class Teleop extends Fragment {
                     if(parent.started) {
                         rocket3CargoCounter++;
                         rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                        //DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                        DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
                     }
                 }
             });
@@ -266,7 +266,7 @@ public class Teleop extends Fragment {
                         if (rocket3CargoCounter > 0) {
                             rocket3CargoCounter--;
                             rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                            //DatabaseClass.removeRocketThirdLevelCargo();
+                            DatabaseClass.removeRocketThirdLevelCargo();
                         }
                     }
                 }
@@ -299,23 +299,23 @@ public class Teleop extends Fragment {
                     String startingPos = climbing.getSelectedItem().toString();
                     switch (startingPos) {
                         case "None":
-                            //DatabaseClass.setClimbSkill(0);
+                            DatabaseClass.setClimbSkill(0);
                             break;
                         case "Level 1":
-                            //DatabaseClass.setClimbSkill(1);
+                            DatabaseClass.setClimbSkill(1);
                             break;
                         case "Level 2":
-                            //DatabaseClass.setClimbSkill(2);
+                            DatabaseClass.setClimbSkill(2);
                             break;
                         case "Level 3":
-                            //DatabaseClass.setClimbSkill(3);
+                            DatabaseClass.setClimbSkill(3);
                             break;
                     }
                 }
 
                 @Override
                 public void onNothingSelected(AdapterView<?> adapterView) {
-                    //DatabaseClass.setClimbSkill(0);
+                    DatabaseClass.setClimbSkill(0);
                 }
 
             });
@@ -323,8 +323,8 @@ public class Teleop extends Fragment {
             endGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (parent.getTimer() >= 150) {
-                        //DatabaseClass.finishMatch();
+                    if (parent.getTimer() >= 1) {
+                        DatabaseClass.finishMatch();
                         parent.finish();
                     }
                 }
@@ -333,4 +333,3 @@ public class Teleop extends Fragment {
             return view;
     }
 }
-

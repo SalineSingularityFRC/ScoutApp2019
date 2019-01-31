@@ -64,7 +64,7 @@ public class MatchInformation extends AppCompatActivity {
                     teamNumberString = teamNumberString.replace("Bundle[{Team Number=","");
                     teamNumberString = teamNumberString.replace("}]", "");
                     int teamNumber = Integer.parseInt(teamNumberString);
-                    //DatabaseClass.createRobotMatch(teamNumber,checkInput,blueTeam);
+                    DatabaseClass.createRobotMatch(teamNumber,checkInput,blueTeam);
                     //Bluetooth code goes here
                     Intent matchData = new Intent(getApplicationContext(), MatchData.class);
                     abort=true;
