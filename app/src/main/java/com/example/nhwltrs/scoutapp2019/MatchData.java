@@ -27,7 +27,7 @@ public class MatchData extends AppCompatActivity {
     int Seconds;
     int MilliSeconds;
     TextView matchTimer;
-    boolean started;
+    boolean started = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +78,7 @@ public class MatchData extends AppCompatActivity {
     private void setUpViewPager(ViewPager viewPager) {
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Pregame(), "Pregame");
-        adapter.addFragment(new Sandstorm(), "Sandstorm");
+        adapter.addFragment(new Sandstorm(this), "Sandstorm");
         adapter.addFragment(new Teleop(this), "Teleop");
         viewPager.setAdapter(adapter);
     }
@@ -113,6 +113,8 @@ public class MatchData extends AppCompatActivity {
             // Show 3 total pages.
             return mFragmentList.size();
         }
-
+    }
+    public int getTimer(){
+        return Seconds;
     }
 }

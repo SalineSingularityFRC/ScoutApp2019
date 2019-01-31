@@ -25,7 +25,7 @@ public class Teleop extends Fragment {
         int rocket1HatchCounter = 0;
         int rocket2HatchCounter = 0;
         int rocket3HatchCounter = 0;
-
+//im stpid
         int cargoShipCargoCounter = 0;
         int rocket1CargoCounter = 0;
         int rocket2CargoCounter = 0;
@@ -87,19 +87,23 @@ public class Teleop extends Fragment {
             cargoPlusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    cargoShipHatchCounter++;
-                    cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                    //DatabaseClass.addCargoShipHatch(parent.getTimer());
+                    if(parent.started) {
+                        cargoShipHatchCounter++;
+                        cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
+                        //DatabaseClass.addCargoShipHatch(parent.getTimer());
+                    }
                 }
             });
 
             cargoMinusButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
-                    if(cargoShipHatchCounter>0) {
-                        cargoShipHatchCounter--;
-                        cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                        //DatabaseClass.removeCargoShipHatch();
+                    if(parent.started){
+                        if(cargoShipHatchCounter>0) {
+                            cargoShipHatchCounter--;
+                            cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
+                            //DatabaseClass.removeCargoShipHatch();
+                        }
                     }
                 }
             });
@@ -107,18 +111,22 @@ public class Teleop extends Fragment {
             rocket1PlusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket1HatchCounter++;
-                    rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                    //DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                    if(parent.started) {
+                        rocket1HatchCounter++;
+                        rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
+                        //DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                    }
                 }
             });
             rocket1MinusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket1HatchCounter > 0) {
-                        rocket1HatchCounter--;
-                        rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                        //DatabaseClass.removeRocketFirstLevelHatch();
+                    if(parent.started){
+                        if(rocket1HatchCounter > 0) {
+                            rocket1HatchCounter--;
+                            rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
+                            //DatabaseClass.removeRocketFirstLevelHatch();
+                        }
                     }
                 }
             });
@@ -127,18 +135,22 @@ public class Teleop extends Fragment {
             rocket2PlusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket2HatchCounter++;
-                    rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                    //DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                    if(parent.started) {
+                        rocket2HatchCounter++;
+                        rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
+                        //DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                    }
                 }
             });
             rocket2MinusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket2HatchCounter > 0) {
-                        rocket2HatchCounter--;
-                        rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                        //DatabaseClass.removeRocketSecondLevelHatch();
+                    if(parent.started){
+                        if(rocket2HatchCounter > 0) {
+                            rocket2HatchCounter--;
+                            rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
+                            //DatabaseClass.removeRocketSecondLevelHatch();
+                        }
                     }
                 }
             });
@@ -146,18 +158,22 @@ public class Teleop extends Fragment {
             rocket3PlusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket3HatchCounter++;
-                    rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                    //DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                    if(parent.started) {
+                        rocket3HatchCounter++;
+                        rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
+                        //DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                    }
                 }
             });
             rocket3MinusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket3HatchCounter > 0) {
-                        rocket3HatchCounter--;
-                        rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                        //DatabaseClass.removeRocketThirdLevelHatch();
+                    if(parent.started){
+                        if(rocket3HatchCounter > 0) {
+                            rocket3HatchCounter--;
+                            rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
+                            //DatabaseClass.removeRocketThirdLevelHatch();
+                        }
                     }
                 }
             });
@@ -165,19 +181,23 @@ public class Teleop extends Fragment {
             cargoPlusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    cargoShipCargoCounter++;
-                    cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                    //DatabaseClass.addCargoShipCargo(parent.getTimer());
+                    if(parent.started) {
+                        cargoShipCargoCounter++;
+                        cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
+                        //DatabaseClass.addCargoShipCargo(parent.getTimer());
+                    }
                 }
             });
 
             cargoMinusButton2.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
-                    if(cargoShipCargoCounter>0) {
-                        cargoShipCargoCounter--;
-                        cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                        //DatabaseClass.removeCargoShipCargo();
+                    if(parent.started){
+                        if(cargoShipCargoCounter>0) {
+                            cargoShipCargoCounter--;
+                            cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
+                            //DatabaseClass.removeCargoShipCargo();
+                        }
                     }
                 }
             });
@@ -185,18 +205,22 @@ public class Teleop extends Fragment {
             rocket1PlusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket1CargoCounter++;
-                    rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                    //DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                    if(parent.started) {
+                        rocket1CargoCounter++;
+                        rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
+                        //DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                    }
                 }
             });
             rocket1MinusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket1CargoCounter > 0) {
-                        rocket1CargoCounter--;
-                        rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                        //DatabaseClass.removeRocketFirstLevelCargo();
+                    if(parent.started){
+                        if(rocket1CargoCounter > 0) {
+                            rocket1CargoCounter--;
+                            rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
+                            //DatabaseClass.removeRocketFirstLevelCargo();
+                        }
                     }
                 }
             });
@@ -205,18 +229,22 @@ public class Teleop extends Fragment {
             rocket2PlusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket2CargoCounter++;
-                    rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                    //DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                    if(parent.started) {
+                        rocket2CargoCounter++;
+                        rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
+                        //DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                    }
                 }
             });
             rocket2MinusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket2CargoCounter > 0) {
-                        rocket2CargoCounter--;
-                        rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                        //DatabaseClass.removeRocketSecondLevelCargo();
+                    if(parent.started) {
+                        if (rocket2CargoCounter > 0) {
+                            rocket2CargoCounter--;
+                            rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
+                            //DatabaseClass.removeRocketSecondLevelCargo();
+                        }
                     }
                 }
             });
@@ -224,18 +252,22 @@ public class Teleop extends Fragment {
             rocket3PlusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rocket3CargoCounter++;
-                    rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                    //DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                    if(parent.started) {
+                        rocket3CargoCounter++;
+                        rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
+                        //DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                    }
                 }
             });
             rocket3MinusButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(rocket3CargoCounter > 0) {
-                        rocket3CargoCounter--;
-                        rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                        //DatabaseClass.removeRocketThirdLevelCargo();
+                    if(parent.started) {
+                        if (rocket3CargoCounter > 0) {
+                            rocket3CargoCounter--;
+                            rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
+                            //DatabaseClass.removeRocketThirdLevelCargo();
+                        }
                     }
                 }
             });
@@ -291,8 +323,10 @@ public class Teleop extends Fragment {
             endGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //DatabaseClass.finishMatch();
-                    parent.finish();
+                    if (parent.getTimer() >= 150) {
+                        //DatabaseClass.finishMatch();
+                        parent.finish();
+                    }
                 }
             });
 
