@@ -30,13 +30,6 @@ public class Pregame extends Fragment {
         // Required empty public constructor
     }
 
-    MatchData parent;
-    @SuppressLint("ValidFragment")
-    public Pregame(MatchData matchData) {
-        parent = matchData;
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pregame, container, false);
@@ -70,22 +63,22 @@ public class Pregame extends Fragment {
                 switch (startingPos) {
                     case "Away":
                         if (level2.isChecked()) {
-                            //DatabaseClass.setStartingPos(-3);
+                            DatabaseClass.setStartingPos(-3);
                         } else {
-                            //DatabaseClass.setStartingPos(3);
+                            DatabaseClass.setStartingPos(3);
                         }
                         location = "Away";
                         break;
                     case "Middle":
-                        //DatabaseClass.setStartingPos(1);
+                        DatabaseClass.setStartingPos(1);
                         location = "Middle";
                         break;
                     case "Closest":
                         if (level2.isChecked()) {
-                            //DatabaseClass.setStartingPos(-2);
+                            DatabaseClass.setStartingPos(-2);
                         }
                         else {
-                            //DatabaseClass.setStartingPos(2);
+                            DatabaseClass.setStartingPos(2);
                         }
                         location = "Closest";
                         break;
@@ -126,20 +119,20 @@ public class Pregame extends Fragment {
                     String robotPre = robotPreload.getSelectedItem().toString();
                     switch(robotPre) {
                         case "Cargo":
-                            //DatabaseClass.setRobotPreload(1);
+                            DatabaseClass.setRobotPreload(1);
                             break;
                         case "Hatch":
-                            //DatabaseClass.setRobotPreload(2);
+                            DatabaseClass.setRobotPreload(2);
                             break;
                         case "None":
-                            //DatabaseClass.setRobotPreload(0);
+                            DatabaseClass.setRobotPreload(0);
                             break;
                     }
                 }
 
                 @Override
                 public void onNothingSelected(AdapterView<?> adapterView) {
-                    //DatabaseClass.setRobotPreload(0);
+                    DatabaseClass.setRobotPreload(0);
                 }
         });
         level2.setOnClickListener(new View.OnClickListener() {
@@ -148,24 +141,24 @@ public class Pregame extends Fragment {
                 if (level2.isChecked()) {
                     switch(location){
                         case"Away":
-                            //DatabaseClass.setStartingPos(-3);
+                            DatabaseClass.setStartingPos(-3);
                             break;
                         case "Middle":
                             break;
                         case "Closest":
-                            //DatabaseClass.setStartingPos(-2);
+                            DatabaseClass.setStartingPos(-2);
                             break;
                     }
                 }
                 else {
                     switch(location){
                         case"Away":
-                            //DatabaseClass.setStartingPos(3);
+                            DatabaseClass.setStartingPos(3);
                             break;
                         case "Middle":
                             break;
                         case "Closest":
-                            //DatabaseClass.setStartingPos(2);
+                            DatabaseClass.setStartingPos(2);
                             break;
                     }
                 }
@@ -187,7 +180,7 @@ public class Pregame extends Fragment {
                 }
                 else {
                     Integer intHatchesOnField = Integer.valueOf(hatchesOnField.getText().toString());
-                    //DatabaseClass.setPreLoadHatch(intHatchesOnField);
+                    DatabaseClass.setPreLoadHatch(intHatchesOnField);
                 }
             }
         });
@@ -206,7 +199,7 @@ public class Pregame extends Fragment {
                 }
                 else {
                     Integer intCargoOnField = Integer.valueOf(cargoOnField.getText().toString());
-                    //DatabaseClass.setPreLoadHatch(intCargoOnField);
+                    DatabaseClass.setPreLoadCargo(intCargoOnField);
                 }
             }
         });
