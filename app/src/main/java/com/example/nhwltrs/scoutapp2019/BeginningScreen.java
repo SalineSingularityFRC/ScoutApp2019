@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class BeginningScreen extends AppCompatActivity {
     public BluetoothClass bluetooth=new BluetoothClass(this);
@@ -19,6 +20,9 @@ public class BeginningScreen extends AppCompatActivity {
 
         //Create all the buttons
         Button newMatch = (Button)findViewById(R.id.inputDataButton);
+        Button goodButton = (Button)findViewById(R.id.goodButton);
+
+        final ImageView goodImage = (ImageView)findViewById(R.id.goodImageView2);
 
         //Set the listeners for the buttons
         newMatch.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +30,13 @@ public class BeginningScreen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent teams = new Intent(getApplicationContext(), Teams.class);
                 startActivity(teams);
+            }
+        });
+
+        goodButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goodImage.setVisibility(View.VISIBLE);
             }
         });
 
@@ -55,5 +66,6 @@ public class BeginningScreen extends AppCompatActivity {
         //More bluetooth code
         bluetooth.end();
     }
+
 
 }
