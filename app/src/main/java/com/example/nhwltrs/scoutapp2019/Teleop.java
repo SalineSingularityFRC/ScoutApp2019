@@ -88,9 +88,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        cargoShipHatchCounter++;
-                        cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
-                        DatabaseClass.addCargoShipHatch(parent.getTimer());
+                        if (cargoShipHatchCounter < 20) {
+                            cargoShipHatchCounter++;
+                            cargoShipHatchCounterTextView.setText(cargoShipHatchCounter + "");
+                            DatabaseClass.addCargoShipHatch(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -112,9 +114,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket1HatchCounter++;
-                        rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
-                        DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                        if (rocket1HatchCounter < 20) {
+                            rocket1HatchCounter++;
+                            rocket1HatchCounterTextView.setText(rocket1HatchCounter + "");
+                            DatabaseClass.addRocketFirstLevelHatch(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -136,9 +140,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket2HatchCounter++;
-                        rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
-                        DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                        if (rocket2HatchCounter < 20) {
+                            rocket2HatchCounter++;
+                            rocket2HatchCounterTextView.setText(rocket2HatchCounter + "");
+                            DatabaseClass.addRocketSecondLevelHatch(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -159,9 +165,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket3HatchCounter++;
-                        rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
-                        DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                        if (rocket3HatchCounter < 20) {
+                            rocket3HatchCounter++;
+                            rocket3HatchCounterTextView.setText(rocket3HatchCounter + "");
+                            DatabaseClass.addRocketThirdLevelHatch(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -182,9 +190,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        cargoShipCargoCounter++;
-                        cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
-                        DatabaseClass.addCargoShipCargo(parent.getTimer());
+                        if (cargoShipCargoCounter < 20) {
+                            cargoShipCargoCounter++;
+                            cargoShipCargoCounterTextView.setText(cargoShipCargoCounter + "");
+                            DatabaseClass.addCargoShipCargo(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -206,9 +216,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket1CargoCounter++;
-                        rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
-                        DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                        if (rocket1CargoCounter < 20) {
+                            rocket1CargoCounter++;
+                            rocket1CargoCounterTextView.setText(rocket1CargoCounter + "");
+                            DatabaseClass.addRocketFirstLevelCargo(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -230,9 +242,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket2CargoCounter++;
-                        rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
-                        DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                        if (rocket2CargoCounter < 20) {
+                            rocket2CargoCounter++;
+                            rocket2CargoCounterTextView.setText(rocket2CargoCounter + "");
+                            DatabaseClass.addRocketSecondLevelCargo(parent.getTimer());
+                        }
                     }
                 }
             });
@@ -253,9 +267,11 @@ public class Teleop extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(parent.started) {
-                        rocket3CargoCounter++;
-                        rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
-                        DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                        if (rocket3CargoCounter < 20) {
+                            rocket3CargoCounter++;
+                            rocket3CargoCounterTextView.setText(rocket3CargoCounter + "");
+                            DatabaseClass.addRocketThirdLevelCargo(parent.getTimer());
+                        }
                     }
                 }
             });
