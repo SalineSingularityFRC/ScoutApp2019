@@ -3,6 +3,7 @@ package com.example.nhwltrs.scoutapp2019;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,6 +11,8 @@ import android.widget.ImageView;
 public class BeginningScreen extends AppCompatActivity {
     public BluetoothClass bluetooth=new BluetoothClass(this);
     private boolean started=false;
+    private static String tag = "7G7 Bluetooth";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +31,18 @@ public class BeginningScreen extends AppCompatActivity {
         newMatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i(tag, "Pressed the new game button");
                 Intent teams = new Intent(getApplicationContext(), Teams.class);
                 startActivity(teams);
             }
         });
 
-        goodButton.setOnClickListener(new View.OnClickListener() {
+        /*goodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goodImage.setVisibility(View.VISIBLE);
             }
-        });
+        });*/
 
         DatabaseClass.setup(bluetooth);
 

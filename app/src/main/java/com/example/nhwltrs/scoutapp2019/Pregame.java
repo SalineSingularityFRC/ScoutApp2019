@@ -34,6 +34,9 @@ public class Pregame extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pregame, container, false);
 
+        DatabaseClass.setPreLoadCargo(0);
+        DatabaseClass.setPreLoadHatch(0);
+
         final Spinner startingPosition = (Spinner) view.findViewById(R.id.spinnerStartPosition);
 
         final CheckBox level2 = (CheckBox)view.findViewById(R.id.level2Checkbox);

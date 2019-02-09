@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,12 +19,15 @@ import java.util.List;
 public class Teams extends AppCompatActivity {
 
     ListView list;
+    TextView debug;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Create the Teams activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams);
+
+        debug = (TextView)findViewById(R.id.textViewDebug);
 
         //Create the button and list
         Button newTeam = (Button) findViewById(R.id.newTeamsButton);
@@ -40,7 +45,6 @@ public class Teams extends AppCompatActivity {
                 finish();
             }
         });
-
         //Set a listener for the newTeam button
         newTeam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +54,8 @@ public class Teams extends AppCompatActivity {
                 startActivity(newTeam);
             }
         });
+
+
 
     }
 
@@ -67,6 +73,7 @@ public class Teams extends AppCompatActivity {
             HashMap<String, String> resultsMap = new HashMap<>();
             resultsMap.put("First Line", DatabaseClass.getTeamName(i));
             resultsMap.put("Second Line", String.valueOf(DatabaseClass.getTeamNumber(i)));
+            debug.setText("Got to this point");
             listItems.add(resultsMap);
         }
 

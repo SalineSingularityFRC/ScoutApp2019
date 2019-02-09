@@ -5,6 +5,7 @@ package com.example.nhwltrs.scoutapp2019;
  */
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.*;
 
@@ -12,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class DatabaseClass {
 
@@ -19,13 +21,28 @@ public class DatabaseClass {
     private static JSONObject tempRobotMatchData;
     public static JSONArray robotMatchData = new JSONArray();
     private static JSONArray tempTeamData = new JSONArray();
-    private static JSONArray teamData = new JSONArray();
+    private static JSONArray teamData;
+    public static String tag = "7G7 Bluetooth";
+
+
 
     public static void setup(BluetoothClass bluetooth) {
         DatabaseClass.bluetooth=bluetooth;
+
+        ArrayList jsonObjectArray = new ArrayList();
+        String currentJSONString = "";
+
         try {
-            FileInputStream fis = bluetooth.activity.openFileInput("teamData");
-            teamData=new JSONArray(fis.read());
+            FileInputStream fis = new FileInputStream("teamData");
+            //FileInputStream fis = bluetooth.activity.openFileInput("teamData");
+            Log.i(tag, fis.toString() + "got the input string");
+            teamData = new JSONArray(fis.read());
+            /*while( (currentJSONString = fis.read()) != null) {
+                JSONObject currentObject = new JSONObject(currentJSONString);
+
+                jsonObjectArray.add(currentObject);
+            }*/
+            Log.i(tag, "finished the fis.read()");
             fis.close();
         } catch (FileNotFoundException e) {
             try {
@@ -41,6 +58,7 @@ public class DatabaseClass {
 
         } catch (JSONException | IOException e) {
             e.printStackTrace();
+            Log.i(tag, "caught JSONException");
         }
     }
 
