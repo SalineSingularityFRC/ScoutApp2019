@@ -339,7 +339,7 @@ public class Teleop extends Fragment {
             endGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (parent.getTimer() >= 1) {
+                    if (parent.getTimer() >= 150) {
                         DatabaseClass.finishMatch();
                         parent.finish();
                     }

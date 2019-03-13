@@ -9,16 +9,6 @@
     android:background="#FFFFFF"
     tools:context="com.example.nhwltrs.scoutapp2019.MatchData">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchStartButton"/>
-
     <TextView
         android:id="@+id/matchTimer"
         android:layout_width="wrap_content"
@@ -31,6 +21,42 @@
         app:layout_constraintEnd_toEndOf="@+id/matchStartButton"
         app:layout_constraintStart_toStartOf="@+id/matchStartButton"
         app:layout_constraintTop_toTopOf="@+id/matchStartButton"/>
+
+    <TextView
+        android:id="@+id/teamDuringMatchTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/product_sans"
+        android:text="Team"
+        android:textColor="#767676"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/matchTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    <TextView
+        android:id="@+id/teamDuringMatchTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/product_sans"
+        android:text="Team"
+        android:textColor="#767676"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/matchTimer"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="726dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchStartButton" />
 
     <Button
         android:id="@+id/matchStartButton"
@@ -91,14 +117,5 @@
         </android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

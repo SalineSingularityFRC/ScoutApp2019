@@ -67,6 +67,7 @@ public class MatchInformation extends AppCompatActivity {
                     DatabaseClass.createRobotMatch(teamNumber,checkInput,blueTeam);
                     //Bluetooth code goes here
                     Intent matchData = new Intent(getApplicationContext(), MatchData.class);
+                    matchData.putExtra("Team Number", teamNumber);
                     abort=true;
                     startActivity(matchData);
                 }

@@ -27,6 +27,8 @@ public class MatchData extends AppCompatActivity {
     int Seconds;
     int MilliSeconds;
     TextView matchTimer;
+    TextView teamDuringMatchTextView1;
+    TextView teamDuringMatchTextView2;
     boolean started = false;
 
     @Override
@@ -42,10 +44,20 @@ public class MatchData extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         matchTimer  = (TextView) findViewById(R.id.matchTimer);
+        teamDuringMatchTextView1 = (TextView) findViewById(R.id.teamDuringMatchTextView1);
+        teamDuringMatchTextView2 = (TextView) findViewById(R.id.teamDuringMatchTextView2);
         final Button startMatch = (Button) findViewById(R.id.matchStartButton);
 
         handler = new Handler();
         StartTime = SystemClock.uptimeMillis();
+
+        if(getIntent().hasExtra("Team Number")) {
+            String teamNumberString = getIntent().getExtras().toString();
+            teamNumberString = teamNumberString.replace("Bundle[{Team Number=","");
+            teamNumberString = teamNumberString.replace("}]", "");
+            teamDuringMatchTextView2.setText(teamNumberString);
+            teamDuringMatchTextView1.setText(teamNumberString);
+        }
 
         startMatch.setOnClickListener(new View.OnClickListener() {
             @Override
