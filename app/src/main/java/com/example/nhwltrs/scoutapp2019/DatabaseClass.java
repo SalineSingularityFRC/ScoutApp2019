@@ -156,7 +156,8 @@ public class DatabaseClass {
                     "\"rocketSecondLevelHatch\":[]," +
                     "\"rocketThirdLevelCargo\":[]," +
                     "\"rocketThirdLevelHatch\":[]," +
-                    "\"climbSkill\":-1" + //-1 is error, 0 is nothing, 1 is level 1, 2 is level 2, 3 is level 3
+                    "\"climbSkill\":-1," + //-1 is error, 0 is nothing, 1 is level 1, 2 is level 2, 3 is level 3
+                    "\"defense\":-1" + //-1 is error, 0 is no defense, 1 is defense
                     "}");
         } catch(JSONException e){
             e.printStackTrace();
@@ -169,6 +170,15 @@ public class DatabaseClass {
         } catch(JSONException e){
             e.printStackTrace();
         }
+    }
+
+    public static void setDefense(int def) {
+        try{
+            tempRobotMatchData.put("defense", def);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void setRobotPreload(int pre) {

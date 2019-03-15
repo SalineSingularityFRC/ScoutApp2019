@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -83,6 +84,21 @@ public class Teleop extends Fragment {
             final TextView rocket1CargoCounterTextView = (TextView) view.findViewById(R.id.rocket1CargoCounterTextView);
             final TextView rocket2CargoCounterTextView = (TextView) view.findViewById(R.id.rocket2CargoCounterTextView);
             final TextView rocket3CargoCounterTextView = (TextView) view.findViewById(R.id.rocket3CargoCounterTextView);
+
+            final CheckBox defenseCheckbox = (CheckBox) view.findViewById(R.id.defenseCheckbox);
+
+            DatabaseClass.setDefense(0);
+            defenseCheckbox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (defenseCheckbox.isChecked()) {
+                        DatabaseClass.setDefense(1);
+                    }
+                    else {
+                        DatabaseClass.setDefense(0);
+                    }
+                }
+            });
 
             cargoPlusButton.setOnClickListener(new View.OnClickListener() {
                 @Override
