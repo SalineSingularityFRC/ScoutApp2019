@@ -78,7 +78,7 @@ public class MatchData extends AppCompatActivity {
             int timeLeft = 150 - Seconds;
             MilliSeconds = (int) (UpdateTime % 1000);
             MilliSeconds = MilliSeconds / 1000;
-            if (timeLeft < 0) {
+            if (timeLeft < 1) {
                 matchTimer.setText("Match Over!");
             } else {
                 matchTimer.setText(timeLeft + "");
